@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@800&family=Dancing+Script:wght@600&family=Libre+Caslon+Text&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Libre Caslon Text', serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+.header {
+    background-color: gray;
+    color: white;
+    padding: .5em ;
+    display: grid;
+    grid-template-columns: 4em 1fr;
+    grid-gap: 1em;
+}
+.header__kop1 { font-family: 'Alegreya Sans SC', sans-serif;
+    margin: 0;
+    font-size: 1.1rem;
+}
+.header__kop2 {
+    margin: 0;
+    font-family: 'Dancing Script', cursive;
+    text-align: right;
+    padding-right: 1.5em;
+    padding-top: 1em;
+    font-size: 1rem;
+}
+.main {
+    display: grid;
+   font-size: .9rem;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "invitation invitation"
+    "text illr"
+    "illb illb"
+    "contact phone"
+    "iban iban";
+}
+main h3 {
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
+.invitation {
+    grid-area: invitation;
+    padding: 1em;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.1em;
+    color: maroon;
+}
+.invitation .auteur {
+    font-family: 'Libre Caslon Text', serif;
+    font-size: .6em;
+    color: slategray;
+}
+.main__text1col {
+    grid-area: text;
+    padding: 1em;
+}
+.auteur {
+    display: block;
+    text-align: right;
+}
+.ill-r {    
+    grid-area: illr;
+}
+.main-breed {
+    grid-area: illb;
+}
+.contact-info {
+    grid-area: contact;
+    padding: 1em;
+}
+.tel-info {
+    grid-area: phone;
+    padding: 1em;
+}
+.tel-info a {
+    display: inline-block;
+}
+.iban {
+    grid-area: iban;
+    padding: 1em;
+}
+@media screen and (min-width: 330px){
+    .header {
+        grid-template-columns: 1fr 4fr;
+    }
+    .header__kop1, .header__kop2 {
+        font-size: 5vw;
+    }
+    .invitation {
+        font-size: 5vw;
+    }
+    .invitation .auteur {
+        font-size: 2vw;
+    }
+    .main-breed {
+        margin-top: .5em;
+    }
+}
+@media screen and (min-width: 530px){
+    .main {
+        grid-template-columns: 2fr 3fr;
+    }
+}
+@media screen and (min-width: 560px){
+    .main {
+        grid-template-areas: 
+        "invitation invitation"
+        "text illr"        
+        "contact illr"
+        "phone illr"
+        "iban  illr"
+        "illb illb";
+    }
+    .main-breed {
+        margin-bottom: .5em;
+    }
+}
+@media screen and (min-width: 880px){
+    .main {
+        font-size: 1rem;
+        grid-template-columns: 1fr 2fr;
+    }
+}
+@media screen and (min-width: 1121px){
+    .main {
+        margin-left: 20vw;
+    }
+    .invitation {
+        font-size: 4vw;
+    }
+    .invitation .auteur {
+        font-size: 1.5vw;
+    }
+}
