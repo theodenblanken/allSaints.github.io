@@ -1,2 +1,1 @@
-# allsaints.github.io
-All Saints Catholic Church
+# All Saints Catholic Church
